@@ -13,11 +13,11 @@
 </head>
 <body>
 <!--header section start  -->
-<header class="active">
-    <div id="menu-bars"  class="fas fa-bars">
+<header>
+    <div id="menubar"  class="fas fa-bars">
     </div>
     <nav class="navbar">
-        <a href="#home">home</a>
+        <a href="#home"><i class="fas fa-home"></i>home</a>
         <a href="#about">about</a>
         <a href="#services">services</a>
         <a href="#portfolio">portfolio</a>
@@ -26,35 +26,32 @@
     </nav>
 </header>
 <!-- header section end -->
-<!-- home section starts -->
 <section class="home" id="home">
-    <div class="content">
-        <img src="img/FB_IMG_1572840012147.jpg" alt="">
-        <h3>janki <span>patel</span></h3>
-        <p>i am a <span class="typing-text">web designer</span></p>
-        <a href="#about" class="btn">about me</a>
-    </div>
+  <div class="image">
+      <img src="img/FB_IMG_1572840012147.jpg" alt="">
+  </div> 
+  <div class="content">
+      
+  </div> 
+
 </section>
+<!-- home section starts -->
+
 <!-- home section end -->
 
 
 
 <!-- javascript -->
-<script src="js/portfolio.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script>
-    let menu = document.querySelector('#menu-bars'); 
-    let header = document.querySelector('header');
+    $(document).ready(function(){
+    $('#menubar').click(function(){
+        // $(this).toggleClass('fas fa-times');
+        $('.navbar').toggleClass('nav-toggle');
 
-menu.onclick = () =>{
-    menu.classList.toggle('fa-times');
-    header.classList.toggle('active');
-}
-var typed = new typed('.typing-text',{
-    String:['web designer','web developer'],
-    loop:true,
-    typespeed:150
-})
+    });
 
+});
 </script>
 
 </body>

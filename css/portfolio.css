@@ -1,128 +1,105 @@
 *{
     margin: 0;
     padding: 0;
-    /* font-family: 'Satisfy', cursive; */
-    box-sizing: border-box;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: all .2s linear;
+    
 }
 section{
-    padding: 2rem 9%;
-    min-height: 100vh;
-}
-header{
-    position: fixed;
-    top: 0;
-    right: 0;
-    min-height: 100vh;
-    background-color:gray;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-}
-header .navbar{
-    writing-mode: vertical-lr;
-    padding: 1.5rem;
-}
-header .navbar a{
     padding: 1rem;
+    padding: 0 8%;
+    min-height: 100vh;
+}
+#menubar{
+    font-size: 2rem;
+    background-color: gray;
     color: white;
-    font-size:20px;
-}
-header .navbar a:hover{
-    transition: 1s;
-    color: teal;
-}
-#menu-bars{
+    border-radius: 5rem;
+    height: 4rem;
+    width: 4rem;
+    text-align: center;
+    line-height: 4rem;
     position: fixed;
-    z-index: 10000;
-    top: 1rem;
-    left: 1rem;
-    padding: 10px;
-    border-radius:10px;
-    color: white;
-    background-color:red;
+    top: 2rem;
+    right: 2rem;
+    z-index: 1000;
     cursor: pointer;
-    font-size: 3rem;
-    display: none;
 }
+#menubar.fas fa-bars{
+    transform: rotate(-180deg);
+    color: white;
+}
+.navbar{
+    position: fixed;
+    top: 2.4rem;
+    right: 2.5rem;
+    padding: 1.1rem 2rem;
+    padding-right: 4rem;
+    z-index: 999;
+    border: 0.1rem solid lightgray;
+    border-radius: 1rem;
+    opacity: 0;
+    transform-origin: top right;
+    transform: scale(0);
+    text-transform: capitalize;
+    background-color: rgba(169, 169, 169, 0.068);
+}
+.navbar.nav-toggle{
+    opacity: 1;
+    transform: scale(1);
+}
+.navbar a{
+    display:block;
+    font-size: 1.1rem;
+    padding: 1rem;
+    padding-right: 7rem;
+    color:black;
+    text-decoration: none;
+}
+.navbar a:hover{
+    color:red;
+    transform: translateX(1rem);
+}
+
+/* home section */
 .home{
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    position: relative;
+    align-items: center;
     background-image: url(..//img/widescreen-high-resolution-nature-hd-1920x1080-wallpaper-preview.jpg);
-    background-size: cover;
     background-repeat: no-repeat;
+    background-size: cover;
     background-position: center;
 }
-.home .content{
+.home .image{
+    flex: 1 1 40rem;
+    padding: 1rem;
     text-align: center;
-    position: relative;
-    z-index: 1;
 }
-.home .content img{
-    height:15rem;
-    width:15rem;
+.home .image img{
+    width: 17rem;
+    height: 17rem;
+    padding: .2rem;
+    /* box-shadow: 0 .5rem 1rem lightgray; */
+    border: .2rem solid black;
+    /* border-top: .5rem solid rgba(216, 191, 216, 0.616);
+    border-right: .5rem solid rgba(216, 191, 216, 0.918);
+    border-left: .5rem solid rgba(0, 128, 128, 0.329);
+    border-bottom: .5rem solid rgba(0, 128, 128, 0.329); */
+    border-radius: .5rem;
     border-radius: 50%;
-    border: 7px solid white;
-    object-fit: cover;
 }
-.home .content h3{
-    font-size: 40px;
-    text-transform: capitalize;
-    margin: 10px;
+.home .content{
+    flex: 1 1 40rem;
+    padding: 1rem;
 }
-.home .content h3 span{
-    color: teal;
-}
-.home .content p{
-    font-size: 20px;
-    font-weight: 500;
-    text-transform: capitalize;
-    margin: 0 10px;
-}
-.home .content .btn{
-    display: inline-block;
-    font-size: 20px;
-    margin: 10px;
-    padding: 10px;
-    background-color:black;
-    color: white;
-}
-.home .content .btn a{
-    text-decoration:none;
-}
+
 
 /* responsive */
 /* mobile view */
-@media screen and (max-width:426px){
-header{
-        width: 100%;
-        left: -120%;
+@media screen and (max-width:426px) {
+.navbar{
+    top: 8rem;
+    left: 2.5rem;
+   
+}   
 }
-}
-@media screen and (max-width:426px){
-header .active{
-        left: 0;
-}
-}
-@media screen and (max-width:426px){
-header .navbar{
-       writing-mode: horizontal-tb;
-}
-}
-@media screen and (max-width:426px){
-header .navbar a{
-         display: block;
-}
-}
-@media screen and (max-width:426px){
-#menu-bars{
-            display:initial;
-}
-}    
