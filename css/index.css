@@ -1,0 +1,225 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    line-height: 1.5;
+    font-size: 16px;
+    /* font-family: 'Satisfy', cursive; */
+    font-weight: 400;
+}
+/* profilebar */
+.profilebar{
+    width: 270px;
+    height: 100%;
+    background:white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    padding: 30px;
+}
+.profilebar .logo{
+   padding: 30px 0;
+}
+.profilebar .logo a{
+    font-size: 50px;
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-weight: 900;
+    display: inline-block;
+    position: relative;
+    padding: 0 10px;
+    line-height: 50px;
+}
+.profilebar .logo a::before{
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-top: 4px solid red;
+    border-left: 4px solid red;
+}
+.profilebar .logo a::after{
+    content: '';
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-bottom: 4px solid red;
+    border-right: 4px solid red;
+}
+.profilebar .nav-toggler{
+    height: 40px;
+    width: 45px;
+    border: 1px solid red;
+    cursor: pointer;
+    position: fixed;
+    left: 300px;
+    top: 30px;
+    z-index: 11;
+    border-radius: 5px;
+    background:white;  
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+.profilebar .nav-toggler span{
+    height: 2px;
+    width: 16px;
+    display: inline-block;
+    border: 1px solid red;
+    position: relative;
+}
+.profilebar .nav-toggler span::before{
+    content: '';
+    width: 15px;
+    border: 1px solid red;
+    position: absolute;
+    top: -6px;
+    left: -1px;
+}
+.profilebar .nav-toggler span::after{
+    content: '';
+    width: 15px;
+    border: 1px solid red;
+    position: absolute;
+    top:5px;
+    left:-1px;
+}
+.profilebar .nav{
+    margin: 80px 0;
+    list-style-type: none;
+    padding: 0;
+}
+.profilebar .nav li{
+    display: block;
+}
+.profilebar .nav li a{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+    text-decoration: none;
+    line-height: 45px;
+    display: block;
+    text-transform: capitalize;
+    border-bottom: 1px solid gray;
+    transition: all 0.3s ease;
+}
+.profilebar .nav li a:hover{
+    padding-left: 10px;
+    color: red;
+}
+.profilebar .nav li a i{
+    margin:0 10px;
+}
+.profilebar .copyright-text{
+    font-size: 18px;
+    color: black;
+    font-weight: 800;
+}
+
+section{
+    background:rgba(169, 169, 169, 0.473);
+    min-height: 100vh;
+    display: block;
+    padding: 0 30px;
+}
+/* main content */
+.main-content{
+    max-width: 100%;
+    padding-left: 270px;
+}
+/* home section */
+.main-content .container{
+    max-width:100%;
+    margin: auto;
+}
+.homesection{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+.homesection .intro{
+    text-align: center;
+}
+.homesection .intro img{
+    width: 100%;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+.homesection .intro h1{
+    font-size: 40px;
+    text-transform: capitalize;
+    font-weight: 800;
+    padding:0 10px;
+}
+.homesection .intro p{
+    font-size: 18px;
+    text-transform: capitalize;
+    font-weight: 800;
+    padding:0 10px;
+}
+.homesection .intro .social-links{
+    margin-top:10px;
+}
+.homesection .intro .social-links a{
+    height: 35px;
+    width: 35px;
+    background-color: red;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+.homesection .intro .social-links a:hover{
+    transition:1s;
+    transform: rotate(5000deg);
+}
+/* about section */
+.aboutsection{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+/* responsive */
+@media screen and (max-width:426px){
+.profilebar{
+    width: 100%;
+    padding: 10px;
+    display: none;
+}
+}
+@media screen and (max-width:426px){
+.profilebar .nav{
+    margin:60px 0;
+}
+}
+@media screen and (max-width:426px) {
+.profilebar .nav-toggler{
+    left: 256px;
+    top: 30px;
+    display:inline-block;
+}
+}
+@media screen and (max-width:426px){
+.main-content{
+    padding: 10px;
+}
+}
+
